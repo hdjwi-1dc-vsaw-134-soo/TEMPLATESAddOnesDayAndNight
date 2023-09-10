@@ -16,14 +16,14 @@ WA.onInit().then(() => {
  // Julia custom
 
     // At 19:00, turn on night
-    const cronStartNight = parseCronExpression('0 12 * * *');
+    const cronStartNight = parseCronExpression('0 19 * * *');
     scheduler.setInterval(cronStartNight, () => {
         WA.room.showLayer("night");
         WA.room.showLayer("light");
     });
 
     // At 7:00, turn on day
-    const cronStartDay = parseCronExpression('0 13 * * *');
+    const cronStartDay = parseCronExpression('0 7 * * *');
     scheduler.setInterval(cronStartDay, () => {
         WA.room.hideLayer("night");
         WA.room.hideLayer("light");
@@ -31,8 +31,8 @@ WA.onInit().then(() => {
 
     // If the player enters the room between 19:00 and 7:00, turn on night
     const date = new Date();
-    const startNight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 13, 0, 0);
-    const startDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 14, 0, 0);
+    const startNight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 19, 0, 0);
+    const startDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 0, 0);
     if (date > startNight || date < startDay) {
         console.log(startDay)
         console.log(startNight)
