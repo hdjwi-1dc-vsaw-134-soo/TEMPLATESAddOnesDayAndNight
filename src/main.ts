@@ -41,6 +41,7 @@ if (date < startNight || date > startDay) {
     console.log(date > startDay)
     WA.room.hideLayer("night");
     WA.room.hideLayer("light");
+    console.log(date < startNight || date > startDay)
 }
 
     WA.room.onEnterLayer("floor").subscribe(() => {
