@@ -31,12 +31,14 @@ scheduler.setInterval(cronStartDay, () => {
 
 // If the player enters the room between 19:00 and 7:00, turn on night
 const date = new Date();
-const startNight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 18, 0, 0);
-const startDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 0, 0);
+const startNight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 19, 0, 0);
+const startDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 10, 0, 0);
 if (date < startNight || date > startDay) {
     console.log(startDay)
     console.log(startNight)
     console.log(date)
+    console.log(date < startNight)
+    console.log(date > startDay)
     WA.room.hideLayer("night");
     WA.room.hideLayer("light");
 }
