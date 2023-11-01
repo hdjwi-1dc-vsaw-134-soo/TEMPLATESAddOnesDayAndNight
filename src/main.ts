@@ -37,8 +37,8 @@ WA.onInit().then(() => {
     console.log(date)
     console.log(date < startNight)
     console.log(date > startDay)
-    console.log(date < startNight || date > startDay)
-    if (date < startNight || date > startDay) {
+    console.log(date < startNight && date > startDay)
+    if (date < startNight && date > startDay) {
         
         WA.room.hideLayer("night");
         WA.room.hideLayer("light");
