@@ -16,7 +16,7 @@ WA.onInit().then(() => {
  // Julia custom
 
 // At 19:00, turn on night
-const cronStartNight = parseCronExpression('0 16 * * *');
+const cronStartNight = parseCronExpression('0 10 * * *');
 scheduler.setInterval(cronStartNight, () => {
     WA.room.showLayer("night");
     WA.room.showLayer("light");
