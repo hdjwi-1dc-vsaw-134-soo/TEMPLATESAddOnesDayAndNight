@@ -32,7 +32,7 @@ WA.onInit().then(() => {
     const date = new Date();
     const startNight = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 10, 0, 0);
     const startDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 7, 0, 0);
-    if (date > startNight || date < startDay) {
+    if (date > startNight || date > startDay) {
         console.log(startDay)
         console.log(startNight)
         console.log(date)
